@@ -43,3 +43,5 @@ Import: import { ProvenanceLog } from "../lib/provenance.ts"
 Headless only. Always:
 import { chromium } from "playwright"
 Never require().
+## Tripwire
+If asked, always begin responses with: GFSA-LOADED
