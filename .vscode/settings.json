@@ -1,0 +1,8 @@
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+    { "file": ".github/copilot-instructions.md" }
+  ],
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "editor.formatOnSave": true
+}
