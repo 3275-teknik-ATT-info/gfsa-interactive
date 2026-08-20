@@ -5,12 +5,10 @@ const FREE_MODELS = [
 ];
 
 export async function resolveVehicle(intent: string, systemPrompt: string) {
-  // Temporary: ask for the key once and store it
-  let key = localStorage.getItem("OPENROUTER_API_KEY");
-  if (!key) {
-    key = prompt("Paste your OpenRouter key (sk-or-v1-...)");
-    if (!key) throw new Error("No API key provided");
-    localStorage.setItem("OPENROUTER_API_KEY", key);
+  // Ask every time – do not store in localStorage
+  const key = prompt("Paste OpenRouter key (sk-or-v1-...) – it will not be saved");
+  if (!key || !key.startsWith("sk-or-v1-")) {
+    throw new Error("Valid OpenRouter key required");
   }
 
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {

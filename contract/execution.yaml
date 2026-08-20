@@ -1,0 +1,18 @@
+reasoning:
+  mode: constrained                 # runtime default
+  stage_allowlist:
+    concept: [elevated]
+    research: [elevated]
+    contracted: [constrained]
+    scaffolding: [constrained]
+    bootstrap: [constrained]
+    implementation: [constrained]
+    integration: [elevated]
+    verification: [constrained]
+    beta: [constrained]
+    release: [constrained]
+  elevated_budget:
+    max_tokens: 4096
+    temperature: 0.3
+    allow_write_properties: true
+  proposal_trap: true               # proposals land in trap field only
