@@ -1,0 +1,9 @@
+{
+  "parent_hash": "597e9c89a8e203595f86fa5cbd37db0d9063fdafa20fe37802c7c7b6ebbef066",
+  "observation": {
+    "selected": "hybrid",
+    "model_note": "free-model resolution bound"
+  },
+  "visibility": "developer",
+  "timestamp": "2026-08-20T02:24:37.733Z"
+}

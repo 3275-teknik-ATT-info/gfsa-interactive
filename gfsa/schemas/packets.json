@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GFSA DPS Packets",
+  "definitions": {
+    "DirectivePacket": {
+      "type": "object",
+      "required": ["id", "stage", "actor", "payload", "bindings", "metrics", "timestamp"],
+      "properties": {
+        "id": { "type": "string" },
+        "stage": { "enum": ["ingest", "bind", "validate", "commit", "observe", "elevate"] },
+        "actor": { "type": "string" },
+        "payload": { "type": "object" },
+        "bindings": { "type": "array", "items": { "type": "string" } },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "latency_ms": { "type": "number" },
+            "size_bytes": { "type": "number" },
+            "hash_time_ms": { "type": "number" }
+          }
+        },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "ObservationPacket": {
+      "type": "object",
+      "required": ["parent_hash", "observation", "visibility", "timestamp"],
+      "properties": {
+        "parent_hash": { "type": "string" },
+        "observation": { "type": "object" },
+        "visibility": { "enum": ["developer", "audit", "public"] },
+        "timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "AuditEventPacket": {
+      "type": "object",
+      "required": ["provenance", "event", "elevation"],
+      "properties": {
+        "provenance": { "type": "string" },
+        "event": { "type": "string" },
+        "elevation": { "type": "boolean" },
+        "observation": { "type": ["object", "null"] },
+        "signature": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

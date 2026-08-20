@@ -1,0 +1,15 @@
+{
+  "provenance": "87dc7e18b7427bcb338850efdcb98b0265912e56f07a4c3a63c4754f020cf8cf:llm:bind:2026-08-20T02:26:05.118Z",
+  "event": "resolution_bound",
+  "elevation": true,
+  "observation": {
+    "parent_hash": "87dc7e18b7427bcb338850efdcb98b0265912e56f07a4c3a63c4754f020cf8cf",
+    "observation": {
+      "selected": "hybrid",
+      "model_note": "free-model resolution bound"
+    },
+    "visibility": "developer",
+    "timestamp": "2026-08-20T02:26:05.118Z"
+  },
+  "signature": null
+}

@@ -1,0 +1,23 @@
+# build/vehicles.yaml — closed vocabulary
+# Elevation is stage-bound; deltas require audit gate.
+vehicles:
+  - id: apk-web-intelligence
+    capability: web-intel
+    stage: build
+    description: "APK web intelligence vehicle"
+  - id: filesystem-adapter
+    capability: fs
+    stage: adapters
+    description: "Filesystem adapter vehicle"
+  - id: git-adapter
+    capability: git
+    stage: adapters
+    description: "Git adapter vehicle"
+  - id: web-adapter
+    capability: web
+    stage: adapters
+    description: "Web adapter vehicle"
+  - id: claude-adapter
+    capability: llm
+    stage: adapters
+    description: "Claude adapter vehicle"

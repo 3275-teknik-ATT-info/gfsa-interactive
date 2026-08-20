@@ -1,0 +1,46 @@
+{
+  "id": "92ef54a4-3f4d-4374-9807-08b0ad6b0c1e",
+  "stage": "bind",
+  "actor": "llm",
+  "payload": {
+    "candidates": [
+      {
+        "id": "hybrid",
+        "compatibility": 0.95,
+        "supported_requirements": [
+          "browser UI",
+          "local analysis",
+          "APK parsing"
+        ]
+      }
+    ],
+    "selected": "hybrid",
+    "decision": {
+      "requirement": "Build an APK web-intelligence tool that needs browser UI and local analysis",
+      "evidence": [
+        "User requested browser UI + local analysis"
+      ],
+      "decision": "hybrid",
+      "action": [
+        "browser interface",
+        "local worker",
+        "APK packaging"
+      ],
+      "acceptance": [
+        "UI works",
+        "local analysis works",
+        "APK installable"
+      ]
+    }
+  },
+  "bindings": [
+    "validate",
+    "commit"
+  ],
+  "metrics": {
+    "latency_ms": 0,
+    "size_bytes": 724,
+    "hash_time_ms": 0
+  },
+  "timestamp": "2026-08-20T00:42:44.751735+00:00"
+}
