@@ -1,0 +1,15 @@
+vehicles:
+  - id: pwa
+    capabilities: [browser_ui, github_pages, offline, visualization]
+  - id: cli
+    capabilities: [terminal, automation, scripting, local_execution]
+  - id: bootstrap
+    capabilities: [environment_configuration, dependency_installation, repository_initialization]
+  - id: browser_extension
+    capabilities: [browser_integration, page_interaction]
+  - id: worker
+    capabilities: [background_execution, remote_execution]
+  - id: hybrid
+    capabilities: [browser_ui, local_execution, remote_execution]
+  - id: package_review
+    capabilities: [manifest_packaging, zip_export, review_artifact]

@@ -1,0 +1,6 @@
+proposal_gate:
+  require_review_pr: true
+  closed_vocabulary_delta: forbid_without_audit
+  labels:
+    - gfsa-proposal
+    - needs-audit

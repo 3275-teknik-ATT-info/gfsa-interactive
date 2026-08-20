@@ -1,0 +1,11 @@
+version: "1.0"
+mode: stage_bound
+nodes:
+  P1: { id: USER_DECLARED, required: true }
+  P2: { id: OBSERVED, required: true }
+  P3: { id: RESEARCHED, required: true }
+  P4: { id: INFERRED, required: true }
+  P5: { id: SELECTED, required: true }
+  P6: { id: VERIFIED, required: true }
+trail: [P1, P2, P3, P4, P5, P6]
+allowlist: [intent, research, resolution, build, audit]

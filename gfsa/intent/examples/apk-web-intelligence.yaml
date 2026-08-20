@@ -1,0 +1,10 @@
+topic: "APK web intelligence bootstrap"
+given:
+  - "Provenance chain P1–P6"
+  - "Legal vehicle vocabulary"
+  - "Existing contract/execution.yaml"
+find:
+  - "Deterministic validators"
+  - "Capability match → selected vehicle"
+  - "Persistent state under state/projects/"
+mode: stage_bound

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GFSA Interactive</title>
+  <style>
+    body { margin: 0; background: #0a0a0a; color: #e0e0e0; font-family: system-ui, sans-serif; }
+    #app { padding: 1rem; max-width: 1100px; margin: 0 auto; }
+    input, button { font-size: 1rem; padding: 0.6rem 1rem; margin: 0.3rem 0; }
+    input { width: 100%; max-width: 600px; background: #1a1a1a; color: #fff; border: 1px solid #333; }
+    button { background: #2563eb; color: white; border: none; cursor: pointer; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    svg { width: 100%; height: auto; background: #111; border-radius: 8px; margin-top: 1rem; }
+    .node { fill: #1e293b; stroke: #475569; stroke-width: 2; }
+    .node.active { fill: #1e40af; stroke: #60a5fa; }
+    .node.done { fill: #065f46; stroke: #34d399; }
+    text { fill: #e2e8f0; font-size: 13px; pointer-events: none; }
+    #status { margin-top: 1rem; white-space: pre-wrap; font-family: monospace; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>GFSA Interactive</h1>
+    <input id="topic" type="text" placeholder="Enter project topic..." value="Build an APK web-intelligence tool that needs browser UI and local analysis" />
+    <br />
+    <button id="run">Run Resolution</button>
+
+    <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+      <!-- Nodes -->
+      <rect id="n1" class="node" x="20"  y="120" width="140" height="60" rx="8"/>
+      <rect id="n2" class="node" x="200" y="120" width="140" height="60" rx="8"/>
+      <rect id="n3" class="node" x="380" y="120" width="140" height="60" rx="8"/>
+      <rect id="n4" class="node" x="560" y="120" width="140" height="60" rx="8"/>
+      <rect id="n5" class="node" x="740" y="120" width="140" height="60" rx="8"/>
+
+      <text x="90"  y="155" text-anchor="middle">Human Topic</text>
+      <text x="270" y="155" text-anchor="middle">Intent</text>
+      <text x="450" y="155" text-anchor="middle">LLM Resolve</text>
+      <text x="630" y="155" text-anchor="middle">Vehicle</text>
+      <text x="810" y="155" text-anchor="middle">Provenance</text>
+
+      <!-- Arrows -->
+      <path d="M160 150 H200" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M340 150 H380" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M520 150 H560" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M700 150 H740" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <defs>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+        </marker>
+      </defs>
+    </svg>
+
+    <div id="status">Ready. Enter a topic and click Run Resolution.</div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

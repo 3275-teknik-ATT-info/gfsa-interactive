@@ -1,0 +1,7 @@
+proposal:
+  allowed_only_when: reasoning.mode == elevated
+  required_fields: [type, target, delta, rationale, evidence_ids]
+  auto_apply: false
+  review_required: true
+  trap_field: proposals             # never written into live contracts
+  approval_path: GitHub PR

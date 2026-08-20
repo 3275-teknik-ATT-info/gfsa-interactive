@@ -1,0 +1,10 @@
+reasoning:
+  mode: stage_bound          # pure function of current stage
+stage_allowlist:
+  - intent
+  - research
+  - resolution
+  - build
+  - audit
+elevation:
+  rule: "stage ∈ stage_allowlist ∧ proposal_gate_pass"

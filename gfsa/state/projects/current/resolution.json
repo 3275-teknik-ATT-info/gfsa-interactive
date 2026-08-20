@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "id": "hybrid",
+      "compatibility": 0.95,
+      "supported_requirements": [
+        "browser UI",
+        "local analysis",
+        "APK parsing"
+      ]
+    }
+  ],
+  "selected": "hybrid",
+  "decision": {
+    "requirement": "Build an APK web-intelligence tool that needs browser UI and local analysis",
+    "evidence": [
+      "User requested browser UI + local analysis"
+    ],
+    "decision": "hybrid",
+    "action": [
+      "browser interface",
+      "local worker",
+      "APK packaging"
+    ],
+    "acceptance": [
+      "UI works",
+      "local analysis works",
+      "APK installable"
+    ]
+  }
+}
